@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/web.css" />
+    <link rel="stylesheet" href="css/R.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>网站</title>
+  </head>
+  <body>
+    <!--	头部右边导航栏  -->
+    <header class="header">
+      <a href="#" class="logo">Wei</a>
+      <nav class="navbar">
+        <a href="index.html" class="active item" style="--i: 1">主页</a>
+        <a href="R.html" class="item" style="--i: 2">软件</a>
+        <a href="#" class="item" style="--i: 3">网站</a>
+        <a href="#" class="item" style="--i: 4">教程</a>
+      </nav>
+    </header>
+    <!-- 背景图片 -->
+    <div class="image-hero"><img src="/img/BJ2.jpg" alt="背景图片" /></div>
+    <!-- 矩形 -->
+    <div class="rounded-container">
+      <div class="content-box">
+<!--		  文字-->
+		  <div class="title-box">
+			  <div class="index-title">编程类</div>
+		  </div>
+<!--		  图标-->
+		  <div class="links-collect">
+			  <a class="sponsor-item" href="" target="_blank">
+				  <img src="img/Oracle.png" alt="">
+			  </a>
+		  </div>
+		</div>
+    </div>
+    <!-- 动画 -->
+    <script>
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector(".header");
+        if (window.scrollY > 100) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+    </script>
+  </body>
+</html>

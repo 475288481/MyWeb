@@ -41,13 +41,13 @@
   transition: background-color 0.3s, opacity 0.3s;
   background-color: transparent; /* 初始状态为透明 */
   opacity: 0.9; /* 初始状态为半透明 */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 初始状态的阴影效果 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* 初始状态的阴影效果 */
 }
 
 .header.scrolled {
   background-color: #1f242d; /* 滚动后的背景颜色 */
   opacity: 1; /* 滚动后的不透明度 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 滚动后的阴影效果 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* 滚动后的阴影效果 */
 }
 
 .logo {
@@ -66,7 +66,7 @@
 
 .logo.scrolled {
   opacity: 1; /* 滚动后的不透明度 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 滚动后的阴影效果 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0); /* 滚动后的阴影效果 */
 }
 .navbar a {
   display: inline-block;

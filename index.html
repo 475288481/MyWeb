@@ -1,83 +1,50 @@
 <!DOCTYPE html>
-<!-- 声明文档类型为HTML5 -->
 <html lang="en">
-  <!-- 根元素，lang属性指定页面语言为英语 -->
-  <head>
-    <!-- 文档的头部，包含元数据和外部资源链接 -->
+<head>
     <meta charset="UTF-8" />
-    <!-- 设置字符编码为UTF-8，支持更广泛的字符集 -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- 兼容IE浏览器，采用最新的渲染模式 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- 设置视口，使页面宽度适应设备宽度，初始缩放比例为1.0 -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/SJ.css" />
-    <!-- 链接外部样式表style.css，用于页面的样式设置 -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"/>
     <link rel="stylesheet" href="iconfont.css" />
-    <!-- 链接Boxicons图标库的CSS文件，用于使用图标 -->
     <title>个人网站</title>
-    <!-- 设置页面标题为“个人网站” -->
   </head>
   <body>
-    <!-- 文档的主体部分，包含页面的主要内容 -->
+<!--	头部右边导航栏  -->
     <header class="header">
-      <!-- 页面的头部区域，使用class="header"进行样式控制 -->
       <a href="#" class="logo">Wei</a>
-      <!-- 一个链接，点击后回到当前页面，使用class="logo"进行样式控制，显示文本“Wei” -->
-
       <nav class="navbar">
-        <!-- 导航栏，使用class="navbar"进行样式控制 -->
         <a href="#" class="active item" style="--i: 1">主页</a>
-        <!-- 导航栏中的一个链接，点击后回到当前页面，class="active item"用于样式控制，--i: 1可能用于CSS变量控制，显示文本“主页” -->
         <a href="R.html" class="item" style="--i: 2">软件</a>
-        <!-- 导航栏中的一个链接，点击后回到当前页面，class="item"用于样式控制，--i: 2可能用于CSS变量控制，显示文本“关于” -->
-        <a href="#" class="item" style="--i: 3">网站</a>
-        <!-- 导航栏中的一个链接，点击后回到当前页面，class="item"用于样式控制，--i: 3可能用于CSS变量控制，显示文本“Skills” -->
+        <a href="web.html" class="item" style="--i: 3">网站</a>
         <a href="#" class="item" style="--i: 4">教程</a>
-        <!-- 导航栏中的一个链接，点击后回到当前页面，class="item"用于样式控制，--i: 4可能用于CSS变量控制，显示文本“Portfolio” -->
       </nav>
     </header>
-
-    <section class="home">
-      <!-- 一个页面区域，使用class="home"进行样式控制 -->
+<!--    左边标题-->
+  <section class="home">
       <div class="home-content">
-        <!-- 区域内的一个容器，使用class="home-content"进行样式控制 -->
         <h3>个人主页</h3>
-        <!-- 一个三级标题，显示文本“个人主页” -->
         <h3>And I'm a <span class="multiple-text"></span></h3>
-        <!-- 一个三级标题，包含一个span元素，class="multiple-text"可能用于动态显示文本 -->
         <p>用来记录实用软件，网页，方法的网站</p>
-        <!-- 一个段落，描述网站的用途 -->
         <div class="social-media">
-          <!-- 一个容器，用于放置社交媒体链接，使用class="social-media"进行样式控制 -->
           <a href="#" style="--i: 7"><i class="bx bxl-tiktok"></i></a>
-          <!-- 一个链接，点击后回到当前页面，--i: 7可能用于CSS变量控制，包含一个TikTok图标的元素 -->
           <a
             href="https://space.bilibili.com/3546756084140682?spm_id_from=333.1007.0.0"
             style="--i: 8"
             ><i class="iconfont">&#xe600;</i></a
           >
-          <!-- 一个容器，用于放置社交媒体链接，使用class="social-media"进行样式控制 -->
           <a href="https://github.com/475288481" style="--i: 9"
             ><i class="bx bxl-github"></i
           ></a>
         </div>
-        <a href="#" class="btn">软件/网站</a>
-        <!-- 一个链接，点击后回到当前页面，使用class="btn"进行样式控制，显示文本“Download CV” -->
+        <a class="btn">软件/网站</a>
       </div>
       <div class="home-img">
-        <!-- 一个容器，用于放置图片，使用class="home-img"进行样式控制 -->
         <img src="img/TX.jpg" alt="" />
-        <!-- 一个图片元素，图片路径为img/TX.jpg，alt属性为空 -->
       </div>
     </section>
-    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
-    <!-- 引入Typed.js库，用于实现打字动画效果 -->
+  <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
     <script src="script.js"></script>
-    <!-- 引入自定义的JavaScript文件script.js，用于实现页面的交互逻辑 -->
   </body>
 </html>
