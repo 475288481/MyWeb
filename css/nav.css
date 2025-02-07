@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* 全局选择器，选中所有元素 */
+* {
+  /* 去除所有元素的外边距 */
+  margin: 0;
+  /* 去除所有元素的内边距 */
+  padding: 0;
+  /* 设置盒模型为border-box，让元素的内边距和边框包含在指定的宽度和高度内 */
+  box-sizing: border-box;
+  /* 设置所有元素的字体为引入的Poppins字体，若不可用则使用系统默认无衬线字体 */
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  background: #f7f2f2;
+}
+
+.header {
+  /* 设置元素为固定定位，固定在页面某个位置 */
+  position: fixed;
+  /* 距离页面顶部0像素 */
+  top: 0;
+  /* 距离页面左侧0像素 */
+  left: 0;
+  /* 元素宽度占满整个页面 */
+  width: 100%;
+  /* 设置元素的内边距，上下20px，左右10% */
+  padding: 20px 10%;
+  /* 设置元素背景为透明 */
+  background: transparent;
+  /* 使用flex布局 */
+  display: flex;
+  /* 子元素在主轴上两端对齐 */
+  justify-content: space-between;
+  /* 子元素在交叉轴上居中对齐 */
+  align-items: center;
+  /* 设置元素的堆叠顺序，值越大越在上面 */
+  z-index: 100;
+  background: #1f242d;
+  background-color: transparent; /* 初始状态为透明 */
+  opacity: 0.9; /* 初始状态为半透明 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 初始状态的阴影效果 */
+}
+
+.header.scrolled {
+  background-color: #1f242d; /* 滚动后的背景颜色 */
+  opacity: 1; /* 滚动后的不透明度 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 滚动后的阴影效果 */
+}
+
+.logo {
+  /* 设置字体大小为25px */
+  font-size: 25px;
+  /* 设置文字颜色为白色 */
+  color: #fff;
+  /* 去除文字的下划线 */
+  text-decoration: none;
+  /* 设置字体加粗，字重为600 */
+  font-weight: 600;
+  /* 设置鼠标指针样式为默认样式 */
+  cursor: default;
+  /* 初始透明度为0，元素不可见 */
+  opacity: 0;
+  /* 应用名为slideRight的动画，持续1秒，使用ease缓动函数，动画结束后保持最终状态 */
+  animation: slideRight 1s ease forwards;
+  opacity: 0.8; /* 初始状态为半透明 */
+  transition: opacity 0.3s; /* 添加过渡效果 */
+  background-color: transparent; /* 初始状态为透明 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 初始状态的阴影效果 */
+}
+
+.logo.scrolled {
+  opacity: 1; /* 滚动后的不透明度 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 滚动后的阴影效果 */
+}
+
+
+.navbar a {
+  /* 设置元素为行内块级元素 */
+  display: inline-block;
+  /* 设置字体大小为18px */
+  font-size: 18px;
+  /* 设置文字颜色为白色 */
+  color: #fff;
+  /* 去除文字的下划线 */
+  text-decoration: none;
+  /* 设置字体加粗，字重为500 */
+  font-weight: 500;
+  /* 设置元素左侧外边距为35px */
+  margin-left: 35px;
+  /* 初始透明度为0，元素不可见 */
+  opacity: 0;
+  /* 设置过渡效果，持续0.3秒 */
+  transition: 0.3s;
+  /* 应用名为slideTop的动画，持续1秒，使用ease缓动函数，动画结束后保持最终状态 */
+  animation: slideTop 1s ease forwards;
+  /* 动画延迟时间，根据自定义属性--i计算 */
+  animation-delay: calc(0.2s * var(--i));
+}
+
+.navbar a:hover,
+.navbar a.active {
+  /* 设置文字颜色为浅灰色 */
+  color: #b7b2a9;
+}
+
+/* 定义名为slideRight的动画 */
+@keyframes slideRight {
+  /* 动画开始时的状态 */
+  0% {
+    /* 元素在水平方向向左偏移100px */
+    transform: translateX(-100px);
+  }
+  /* 动画结束时的状态 */
+  100% {
+    /* 元素回到原来的水平位置 */
+    transform: translateX(0);
+    /* 元素完全可见 */
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  /* 动画开始时的状态 */
+  0% {
+    /* 元素在垂直方向向下偏移100px */
+    transform: translateY(100px);
+  }
+  /* 动画结束时的状态 */
+  100% {
+    /* 元素回到原来的垂直位置 */
+    transform: translateY(0);
+    /* 元素完全可见 */
+    opacity: 1;
+  }
+}
+
+/* 背景图 */
+.bg {
+  position: relative;
+  width: 100%;
+  height: 514px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* 遮住背景板 */
+.bgrounded-rectangle {
+  width: 100%; /* 设置矩形的宽度 */
+  height: 30px; /* 设置矩形的高度 */
+  background-color: #f7f2f2; /* 设置矩形的背景颜色 */
+  border-radius: 25px 25px 0px 0px; /* 四个角的圆角半径 */
+  position: absolute; /* 设置元素为绝对定位 */
+  top: 499px; /* 距离顶部20px */
+}

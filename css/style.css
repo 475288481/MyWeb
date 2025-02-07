@@ -152,21 +152,6 @@ body {
   color: #b7b2a9;
 }
 
-/* 选中类名为home-content下的所有h1标签 */
-.home-content h1 {
-  /* 设置字体大小为56px */
-  font-size: 56px;
-  /* 设置字体加粗，字重为700 */
-  font-weight: 700;
-  /* 设置元素的上下外边距为-3px，左右为0 */
-  margin: -3px 0;
-  /* 初始透明度为0，元素不可见 */
-  opacity: 0;
-  /* 应用名为slideRight的动画，持续1秒，使用ease缓动函数，动画结束后保持最终状态 */
-  animation: slideRight 1s ease forwards;
-  /* 动画延迟1秒开始 */
-  animation-delay: 1s;
-}
 
 /* 选中类名为home-content下的所有p标签 */
 .home-content p {
