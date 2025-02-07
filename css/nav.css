@@ -67,12 +67,10 @@ body{
   opacity: 0.8; /* 初始状态为半透明 */
   transition: opacity 0.3s; /* 添加过渡效果 */
   background-color: transparent; /* 初始状态为透明 */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 初始状态的阴影效果 */
 }
 
 .logo.scrolled {
   opacity: 1; /* 滚动后的不透明度 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 滚动后的阴影效果 */
 }
 
 
