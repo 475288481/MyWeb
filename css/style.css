@@ -184,7 +184,7 @@ body {
 }
 
 /* 选中类名为social-media下的所有a标签，通常用于社交媒体链接 */
-.social-media a {
+.social-media a  {
   /* 设置元素为行内flex布局 */
   display: inline-flex;
   /* 子元素在主轴上居中对齐 */

@@ -1,13 +1,20 @@
-
 /* 声明的字体名称和字体路径 */
 @font-face {
-  font-family: "宇文天穹-1.000";
-  src: url("/ttf/宇文天穹-1.000.ttf");
+  font-family: "寒";
+  src: url("/ttf/ChillRoundGothic_Bold.ttf"),
+    url("/ttf/ChillRoundGothic_ExtraLight.ttf"),
+    url("/ttf/ChillRoundGothic_Heavy.ttf"),
+    url("/ttf/ChillRoundGothic_Light.ttf"),
+    url("/ttf/ChillRoundGothic_Medium.ttf"),
+    url("/ttf/ChillRoundGothic_Regular.ttf"),
+    url("/ttf/ChillRoundGothic_SemiBold.ttf"),
+    url("/ttf/ChillRoundGothic_Thin.ttf");
 }
 
 body {
-  background: #F8F9FA;
+  background: #f8f9fa;
   background: linear-gradient(to right, #abd8f8, #ffffff); /* 设置渐变背景色 */
+  user-select: none;
 }
 
 /* 背景图 */
@@ -31,13 +38,14 @@ body {
 .bgrounded-rectangle {
   width: 100%; /* 设置矩形的宽度 */
   height: 30px; /* 设置矩形的高度 */
-  background-color: #F8F9FA; /* 设置矩形的背景颜色 */
+  background-color: #f8f9fa; /* 设置矩形的背景颜色 */
   border-radius: 25px 25px 0px 0px; /* 四个角的圆角半径 */
   position: absolute; /* 设置元素为绝对定位 */
   top: 489px; /* 距离顶部20px */
   background: linear-gradient(to right, #abd8f8, #ffffff); /* 设置渐变背景色 */
 }
 
+/* 文字 */
 .title-box {
   display: flex;
   flex-direction: column;
@@ -49,9 +57,10 @@ body {
 .title-box h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #0D47A1;
+  color: #0d47a1;
 }
 
+/* 软件box */
 .software-container {
   display: flex; /* 使用 flex 布局 */
   flex-direction: row; /* 设置主轴方向为横向，使子元素水平排列 */
@@ -74,26 +83,28 @@ body {
   overflow: hidden; /* 隐藏超出容器的部分 */
 }
 
-.software-box img {
-  width: 100%;          /* 设置图片的宽度为其父容器的 100% */
-  height: auto;         /* 设置图片的高度为自动 */
-  object-fit: cover;    /* 确保图片在保持其原始宽高比的同时填充整个容器 */
-  object-position: center; /* 将图片居中显示 */
-  display: block;       /* 将图片显示为块级元素 */
-  transition: transform 0.3s ease; /* 添加过渡效果 */
+.software-box .button-container {
+  display: flex; /* 使用 flex 布局 */
+  justify-content: center; /* 子元素在主轴上居中对齐 */
+  gap: 10px; /* 设置按钮之间的间距 */
+  margin-top: 10px; /* 设置按钮容器的上边距 */
 }
 
-.software-box img:hover {
-  transform: scale(1.2); /* 鼠标悬停时放大 10% */
+.software-box img {
+  width: 100%; /* 设置图片的宽度为其父容器的 100% */
+  height: auto; /* 设置图片的高度为自动 */
+  object-fit: cover; /* 确保图片在保持其原始宽高比的同时填充整个容器 */
+  object-position: center; /* 将图片居中显示 */
+  display: block; /* 将图片显示为块级元素 */
 }
 
 .software-box h3 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #0D47A1;
+  color: #0d47a1;
   margin: 10px 0;
   text-align: center;
-  font-family: "宇文天穹-1.000";
+  font-family: "寒";
 }
 
 .software-box p {
@@ -101,9 +112,14 @@ body {
   color: #000000;
   margin: 10px 0;
   text-align: center;
-  font-family: "宇文天穹-1.000";
+  font-family: "寒";
 }
 
+.software-box a.button {
+  margin: 5px; /* 添加按钮之间的间距 */
+}
+
+/* 下载按钮 */
 .button {
   display: inline-flex;
   align-items: center;
@@ -127,7 +143,7 @@ body {
 .button span {
   display: inline-block; /* 使文字成为行内块元素 */
   margin-left: 10px; /* 文字和图标之间的间距 */
-  font-family: "宇文天穹-1.000";
+  font-family: "寒";
   position: absolute; /* 使文字相对于按钮定位 */
   right: -100%; /* 初始位置在按钮外部 */
   transition: right 0.3s, transform 0.3s; /* 添加过渡效果 */
@@ -145,4 +161,96 @@ body {
 .button:hover span {
   right: 10px; /* 鼠标悬停时文字移动到按钮内部 */
   transform: translateX(-20px); /* 鼠标悬停时文字向左移动 */
+}
+
+/* 滑块 */
+:root {
+  --theme-1: #ae5ef2;
+  --theme-2: #2f8fcf;
+  --theme-3: #2fcf51;
+  --theme-4: #f2e75e;
+}
+
+.tab-bar-wrapper {
+  background-color: white;
+  border-radius: 15px;
+  padding: 5px;
+  display: inline-block;
+  width: 80px; /* 调整宽度 */
+  position: fixed; /* 固定定位 */
+  left: 0; /* 固定在左侧 */
+  top: 70%; /* 垂直居中 */
+  transform: translateY(-50%); /* 垂直居中 */
+}
+
+.tab-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 10px;
+  border-radius: 15px;
+  position: relative;
+  gap: 20px;
+}
+
+.tab-bar_circle-indicator {
+  position: absolute;
+  left: 5px; /* 调整位置到中间 */
+  top: 18px; /* 初始位置 */
+  width: 40px; /* 调整宽度 */
+  height: 40px; /* 调整高度 */
+  border-radius: 50%;
+  background-color: var(--theme-1);
+  z-index: 0;
+  transition: all 0.3s;
+  opacity: 0.7;
+}
+
+.tab-bar_circle-indicator.animate {
+  animation: circleIndicatorAnimate 1s both;
+}
+
+.tab-bar_item {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.tab-bar_item span {
+  position: absolute;
+  left: 40px; /* 调整文字位置 */
+  white-space: nowrap; /* 防止文字换行 */
+  font-size: 1rem;
+  color: #000;
+  writing-mode: vertical-rl; /* 文字纵向显示 */
+  margin-left: 10px;
+  font-family: "寒";
+}
+
+@keyframes circleIndicatorAnimate {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
 }
