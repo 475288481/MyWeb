@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/foot.css" />
     <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/sf.css" />
+    <link rel="stylesheet" href="css/h.css" />
+    <link rel="stylesheet" href="css/reset.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -29,14 +31,32 @@
     </div>
     <!-- 矩形 -->
     <div class="bgrounded-rectangle"></div>
+    <!-- 滑块 -->
+    <div class="tab-bar-wrapper">
+      <div class="tab-bar">
+        <a href="#section1" data-theme="1" class="tab-bar_item">
+          <img src="img/svg/日常.svg" alt="">
+        </a>
+        <a href="#section2" data-theme="2" class="tab-bar_item">
+          <img src="img/svg/工具.svg" alt="">
+        </a>
+        <a href="#section3" data-theme="3" class="tab-bar_item">
+          <img src="img/svg/编程.svg" alt="">
+        </a>
+        <a href="#section4" data-theme="4" class="tab-bar_item">
+          <img src="img/svg/游戏.svg" alt="">
+        </a>
+        <div class="tab-bar_circle-indicator"></div>
+      </div>
+  </div>
     <!-- 文字 -->
-    <div class="title-box" style="padding-top: 0px">
+    <div class="title-box" style="padding-top: 0px" id="section1" data-offset="-100">
       <h1>日常软件</h1>
     </div>
     <!-- 软件 -->
     <div class="software-container">
       <div class="software-box">
-        <img src="sof/QQ.png" alt="软件" />
+        <img src="img/sof/QQ.png" alt="软件" />
         <h3>QQ</h3>
         <p>QQ聊天软件</p>
         <a href="https://im.qq.com/index/" target="_blank" class="button">
@@ -45,7 +65,7 @@
         </a>
       </div>
       <div class="software-box">
-        <img src="sof/WX.png" alt="软件" />
+        <img src="img/sof/WX.png" alt="软件" />
         <h3>微信</h3>
         <p>微信聊天软件</p>
         <a href="https://weixin.qq.com/" target="_blank" class="button">
@@ -54,7 +74,7 @@
         </a>
       </div>
       <div class="software-box">
-        <img src="sof/wyy.png" alt="软件" />
+        <img src="img/sof/wyy.png" alt="软件" />
         <h3>网易云音乐</h3>
         <p>音乐软件</p>
         <a
@@ -67,7 +87,7 @@
         </a>
       </div>
       <div class="software-box">
-        <img src="sof/dy.png" alt="软件" />
+        <img src="img/sof/dy.png" alt="软件" />
         <h3>抖音</h3>
         <p>短视频软件</p>
         <a href="https://www.douyin.com/" target="_blank" class="button">
@@ -76,7 +96,7 @@
         </a>
       </div>
       <div class="software-box">
-        <img src="sof/pot.png" alt="软件" />
+        <img src="img/sof/pot.png" alt="软件" />
         <h3>Potplayer</h3>
         <p>视频播放软件</p>
         <a href="http://www.potplayercn.com/" target="_blank" class="button">
@@ -85,7 +105,7 @@
         </a>
       </div>
       <div class="software-box">
-        <img src="sof/adobe.png" alt="软件" />
+        <img src="img/sof/adobe.png" alt="软件" />
         <h3>Adobe</h3>
         <p>设计软件</p>
         <a
@@ -99,13 +119,13 @@
       </div>
     </div>
     <!-- 文字 -->
-    <div class="title-box">
+    <div class="title-box" id="section2" data-offset="-40">
       <h1>工具</h1>
     </div>
     <!-- 软件 -->
     <div class="software-container">
       <div class="software-box">
-        <img src="sof/hib.png" alt="软件" />
+        <img src="img/sof/hib.png" alt="软件" />
         <h3>HiBit Uninstaller</h3>
         <p>卸载软件</p>
         <a href="https://www.hibitsoft.ir/" target="_blank" class="button">
@@ -114,7 +134,7 @@
         </a>
       </div>
       <div class="software-box">
-        <img src="sof/geek.png" alt="软件" />
+        <img src="img/sof/geek.png" alt="软件" />
         <h3>Geek</h3>
         <p>卸载软件</p>
         <a
@@ -127,7 +147,7 @@
         </a>
       </div>
       <div class="software-box">
-        <img src="sof/bandzip.png" alt="软件" />
+        <img src="img/sof/bandzip.png" alt="软件" />
         <h3>Bandzip</h3>
         <p>解压软件</p>
         <a
@@ -140,7 +160,7 @@
         </a>
       </div>
       <div class="software-box">
-        <img src="sof/7zip.png" alt="软件" />
+        <img src="img/sof/7zip.png" alt="软件" />
         <h3>7-ZIP</h3>
         <p>解压软件</p>
         <a
@@ -153,7 +173,7 @@
         </a>
       </div>
       <div class="software-box">
-        <img src="sof/steam++.png" alt="软件" />
+        <img src="img/sof/steam++.png" alt="软件" />
         <h3>Watt Toolkit</h3>
         <p>加速器</p>
         <a href="https://steampp.net/" target="_blank" class="button">
@@ -162,7 +182,7 @@
         </a>
       </div>
       <div class="software-box">
-        <img src="sof/IDM.png" alt="软件" />
+        <img src="img/sof/IDM.png" alt="软件" />
         <h3>IDM</h3>
         <p>下载器</p>
         <a
@@ -176,13 +196,13 @@
       </div>
     </div>
     <!-- 文字 -->
-    <div class="title-box">
+    <div class="title-box" id="section3" data-offset="-40">
       <h1>编程</h1>
     </div>
     <!-- 软件 -->
     <div class="software-container">
       <div class="software-box">
-        <img src="sof/java.png" alt="软件" />
+        <img src="img/sof/java.png" alt="软件" />
         <h3>Java</h3>
         <p>Java 是一种功能强大、灵活且广泛应用的编程语言。</p>
         <a
@@ -195,7 +215,7 @@
         </a>
       </div>
       <div class="software-box">
-        <img src="sof/IDEA.png" alt="软件" />
+        <img src="img/sof/IDEA.png" alt="软件" />
         <h3>IntelliJ IDEA</h3>
         <p>编程软件</p>
         <a
@@ -208,7 +228,7 @@
         </a>
       </div>
       <div class="software-box">
-        <img src="sof/python.png" alt="软件" />
+        <img src="img/sof/python.png" alt="软件" />
         <h3>Python</h3>
         <p>Python 是一种高级、解释型、通用的编程语言</p>
         <a
@@ -221,7 +241,7 @@
         </a>
       </div>
       <div class="software-box">
-        <img src="sof/pc.png" alt="软件" />
+        <img src="img/sof/pc.png" alt="软件" />
         <h3>Pycharm</h3>
         <p>编程软件</p>
         <a
@@ -234,7 +254,7 @@
         </a>
       </div>
       <div class="software-box">
-        <img src="sof/vs.png" alt="软件" />
+        <img src="img/sof/vs.png" alt="软件" />
         <h3>Visual Studio 2022与Visual Studio Code</h3>
         <p>美国微软公司的开发工具包系列产品</p>
         <a
@@ -248,13 +268,13 @@
       </div>
     </div>
     <!-- 文字 -->
-    <div class="title-box">
+    <div class="title-box" id="section4" data-offset="-70">
       <h1>游戏</h1>
     </div>
     <!-- 软件 -->
     <div class="software-container">
       <div class="software-box">
-        <img src="sof/steam.png" alt="软件" />
+        <img src="img/sof/steam.png" alt="软件" />
         <h3>Steam</h3>
         <p>Steam游戏平台</p>
         <a
@@ -267,7 +287,7 @@
         </a>
       </div>
       <div class="software-box">
-        <img src="sof/epic.png" alt="软件" />
+        <img src="img/sof/epic.png" alt="软件" />
         <h3>Epic</h3>
         <p>Epic游戏平台</p>
         <a
@@ -280,7 +300,7 @@
         </a>
       </div>
       <div class="software-box">
-        <img src="sof/wegame.png" alt="软件" />
+        <img src="img/sof/wegame.png" alt="软件" />
         <h3>WeGame</h3>
         <p>Wegame游戏平台</p>
         <a
@@ -293,7 +313,7 @@
         </a>
       </div>
       <div class="software-box">
-        <img src="sof/mc.png" alt="软件" />
+        <img src="img/sof/mc.png" alt="软件" />
         <h3>我的世界PCL2启动器</h3>
         <p>启动器</p>
         <a
@@ -307,6 +327,8 @@
       </div>
     </div>
     <!-- JavaScript -->
+    <script src="scroll.js"></script>
+    <script src="h.js"></script>
     <script src="script.js"></script>
     <script>
       window.addEventListener("scroll", function () {
@@ -322,8 +344,7 @@
     <!-- 页脚 -->
     <footer class="footer">
       <div class="footer-content">
-        <p>&copy; 2025 Wei. All rights reserved.</p>
-        <p>联系邮箱: <a href="mailto:contact@wei.com">contact@wei.com</a></p>
+        <p>联系邮箱: <a href="mailto:contact@wei.com">zhou_bw@qq.com</a></p>
       </div>
     </footer>
   </body>

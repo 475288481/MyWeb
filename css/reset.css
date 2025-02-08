@@ -1,0 +1,108 @@
+/***
+    新的CSS重置 - 版本1.11.3（最后更新于2024年8月25日）
+    GitHub页面：https://github.com/elad2412/the-new-css-reset
+***/
+
+/*
+    移除所有“用户代理样式表”的样式，除了'display'属性
+    - “symbol *”部分是为了解决Firefox SVG精灵图的bug
+    - “html”元素被排除在外，否则Chrome中的一个bug会破坏CSS的连字符属性（https://github.com/elad2412/the-new-css-reset/issues/36）
+ */
+ *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* 首选的box-sizing值 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 修复移动Safari在横屏模式下增加字体大小的问题 */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* 重新应用锚标签的指针光标 */
+a, button {
+  cursor: revert;
+}
+
+/* 移除列表样式（项目符号/数字） */
+ol, ul, menu, summary {
+  list-style: none;
+}
+
+/* Firefox：解决嵌套有序列表从父级继续编号的问题（https://bugzilla.mozilla.org/show_bug.cgi?id=1881517） */
+ol {
+  counter-reset: revert;
+}
+
+/* 防止图像超出其容器 */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* 移除表格单元格之间的间距 */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - 解决在<body>上使用user-select:none时文本输入不工作的情况 */
+input, textarea {
+  -webkit-user-select: auto;
+}
+
+/* 恢复Safari中textarea元素的'white-space'属性 */
+textarea {
+  white-space: revert;
+}
+
+/* 最小样式以允许样式化meter元素 */
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+/* 预格式化文本 - 仅用于此功能 */
+:where(pre) {
+  all: revert;
+  box-sizing: border-box;
+}
+
+/* 重置输入占位符的默认文本不透明度 */
+::placeholder {
+  color: unset;
+}
+
+/* 修复Chromium浏览器中的bug
+ - 修复content editable属性正常工作。
+ - 为Safari添加webkit-user-select: auto; 以防在包装元素上使用user-select:none */
+:where([contenteditable]:not([contenteditable="false"])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* 恢复可拖动功能 - 仅存在于Chromium和Safari中 */
+:where([draggable="true"]) {
+  -webkit-user-drag: element;
+}
+
+/* 恢复模态对话框的原生行为 */
+:where(dialog:modal) {
+  all: revert;
+  box-sizing: border-box;
+}
+
+/* 移除details summary的webkit样式 */
+::-webkit-details-marker {
+  display: none;
+}
