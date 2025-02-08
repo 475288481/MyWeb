@@ -12,10 +12,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-body{
-  background: #f7f2f2;
-}
-
 .header {
   /* 设置元素为固定定位，固定在页面某个位置 */
   position: fixed;
@@ -132,31 +128,4 @@ body{
     /* 元素完全可见 */
     opacity: 1;
   }
-}
-
-/* 背景图 */
-.bg {
-  position: relative;
-  width: 100%;
-  height: 514px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-/* 遮住背景板 */
-.bgrounded-rectangle {
-  width: 100%; /* 设置矩形的宽度 */
-  height: 30px; /* 设置矩形的高度 */
-  background-color: #f7f2f2; /* 设置矩形的背景颜色 */
-  border-radius: 25px 25px 0px 0px; /* 四个角的圆角半径 */
-  position: absolute; /* 设置元素为绝对定位 */
-  top: 499px; /* 距离顶部20px */
 }
