@@ -105,3 +105,42 @@
 .sponsor-item:hover .text {
   filter: grayscale(0) opacity(1); /* 鼠标悬停时移除灰色滤镜和不透明度 */
 }
+
+/* 媒体查询 */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .box {
+      width: 90%;
+  }
+
+  .links-collect {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .title-box h1 {
+      font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .box {
+      width: 100%;
+  }
+
+  .links-collect {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .title-box h1 {
+      font-size: 1.5rem;
+  }
+}
