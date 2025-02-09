@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/foot.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/web.css" />
+    <link rel="icon" href="img/i.png" type="" />
+    <title>网站</title>
+</head>
+<body>
+    <!-- 头部右边导航栏 -->
+    <header class="header">
+        <a href="#" class="logo">Wei</a>
+        <nav class="navbar">
+            <a href="index.html" class="item" style="--i: 1">主页</a>
+            <a href="sf.html" class="item" style="--i: 2">软件</a>
+            <a href="#" class="active item" style="--i: 3">网站</a>
+            <a href="#" class="item" style="--i: 4">教程</a>
+        </nav>
+    </header>
+    <!-- 背景图 -->
+    <div class="bg">
+        <img src="img/BJ3.jpg" alt="背景图" loading="lazy" />
+    </div>
+    <!-- 矩形 -->
+    <div class="bgrounded-rectangle"></div>
+    <!-- 文本显示位置 -->
+    <div class="box">
+        <!-- 文字 -->
+        <div class="title-box" id="section1" data-offset="">
+            <h1>编程类</h1>
+        </div>
+        <div class="links-collect">
+            <a class="sponsor-item" href="https://github.com/" target="_blank">
+                <img src="img/web/github.svg" alt="">
+                <div class="text">GitHub</div>
+            </a>
+            <a class="sponsor-item" href="https://gitee.com/" target="_blank">
+                <img src="img/web/gitee.svg" alt="">
+            </a>
+            <a class="sponsor-item" href="https://www.csdn.net/" target="_blank">
+                <img src="img/web/csdn.png" alt="">
+            </a>
+            <a class="sponsor-item" href="https://semantic-ui.com/" target="_blank">
+                <img src="img/web/ui.png" alt="">
+                <div class="text">Semantic UI</div>
+            </a>
+        </div>
+        <!-- 文字 -->
+        <div class="title-box" id="section2" data-offset="">
+            <h1>视频</h1>
+        </div>
+        <div class="links-collect">
+            <a class="sponsor-item" href="https://www.bilibili.com/" target="_blank">
+                <img src="img/web/bilbil.png" alt="">
+            </a>
+            <a class="sponsor-item" href="https://www.douyin.com/" target="_blank">
+                <img src="img/web/dy.png" alt="">
+            </a>
+            <a class="sponsor-item" href="https://v.qq.com/" target="_blank">
+                <img src="img/web/tx.png" alt="">
+                <div class="text">腾讯视频</div>
+            </a>
+            <a class="sponsor-item" href="https://www.iqiyi.com/" target="_blank">
+                <img src="img/web/aqy.svg" alt="">
+            </a>
+        </div>
+        <!-- 文字 -->
+        <div class="title-box" id="section3" data-offset="">
+            <h1>邮箱</h1>
+        </div>
+        <div class="links-collect">
+            <a class="sponsor-item" href="https://mail.163.com/" target="_blank">
+                <img src="img/web/163.png" alt="">
+            </a>
+            <a class="sponsor-item" href="https://mail.qq.com/" target="_blank">
+                <img src="img/web/qq.png" alt="">
+            </a>
+        </div>
+        <!-- 文字 -->
+        <div class="title-box" id="section4" data-offset="">
+            <h1>AI</h1>
+        </div>
+        <div class="links-collect">
+            <a class="sponsor-item" href="https://www.doubao.com/" target="_blank">
+                <img src="img/web/doubao.png" alt="">
+                <div class="text">豆包</div>
+            </a>
+            <a class="sponsor-item" href="https://www.deepseek.com/" target="_blank">
+                <img src="img/web/deepseek.png" alt="">
+            </a>
+            <a class="sponsor-item" href="https://kimi.moonshot.cn/" target="_blank">
+                <img src="img/web/kimi.png" alt="">
+            </a>
+        </div>
+        <!-- 文字 -->
+        <div class="title-box" id="section4" data-offset="">
+            <h1>游戏</h1>
+        </div>
+        <div class="links-collect">
+            <a class="sponsor-item" href="https://www.mcmod.cn/" target="_blank">
+                <img src="img/web/mcb.png" alt="">
+            </a>
+            <a class="sponsor-item" href="https://littleskin.cn/" target="_blank">
+                <img src="img/web/litt.png" alt="">
+                <div class="text">LittleSkin</div>
+            </a>
+            <a class="sponsor-item" href="https://files.minecraftforge.net/" target="_blank">
+                <img src="img/web/forge.png" alt="">
+            </a>
+            <a class="sponsor-item" href="https://fabricmc.net/" target="_blank">
+                <img src="img/web/fabric.png" alt="">
+                <div class="text">Fabric</div>
+            </a>
+            <a class="sponsor-item" href="https://neoforged.net/" target="_blank">
+                <img src="img/web/neof.png" alt="">
+            </a>
+            <a class="sponsor-item" href="https://www.nexusmods.com/" target="_blank">
+                <img src="img/web/nex.webp" alt="">
+                <div class="text">Nexusmods</div>
+            </a>
+        </div>
+    </div>
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+        window.addEventListener("scroll", function () {
+            const header = document.querySelector(".header");
+            if (window.scrollY > 50) {
+                // 滚动距离超过50px时
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        });
+    </script>
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>联系邮箱: <a href="mailto:contact@wei.com">zhou_bw@qq.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>

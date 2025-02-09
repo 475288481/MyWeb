@@ -1,0 +1,107 @@
+/* 声明的字体名称和字体路径 */
+@font-face {
+  font-family: "寒";
+  src: url("/ttf/ChillRoundGothic_Bold.ttf"),
+    url("/ttf/ChillRoundGothic_ExtraLight.ttf"),
+    url("/ttf/ChillRoundGothic_Heavy.ttf"),
+    url("/ttf/ChillRoundGothic_Light.ttf"),
+    url("/ttf/ChillRoundGothic_Medium.ttf"),
+    url("/ttf/ChillRoundGothic_Regular.ttf"),
+    url("/ttf/ChillRoundGothic_SemiBold.ttf"),
+    url("/ttf/ChillRoundGothic_Thin.ttf");
+}
+
+/* 背景图 */
+.bg {
+  position: relative;
+  width: 100%;
+  height: 514px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* 遮住背景板 */
+.bgrounded-rectangle {
+    width: 100%; /* 设置矩形的宽度 */
+    height: 30px; /* 设置矩形的高度 */
+    background-color: #ffffff; /* 设置矩形的背景颜色 */
+    border-radius: 25px 25px 0px 0px; /* 四个角的圆角半径 */
+    position: absolute; /* 设置元素为绝对定位 */
+    top: 489px; /* 距离顶部20px */
+  }
+
+/* 文字 */
+.title-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+  font-family: "寒";
+}
+
+.title-box h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0d47a1;
+}
+
+/* 限制文本位置 */
+.box {
+  width: 75%;
+  height: 100%;
+  margin: 0 auto; /* 自动设置左右外边距，使其居中 */
+}
+
+.links-collect {
+  margin-top: 2em;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  column-gap: 8px;
+  min-width: 240px;
+}
+
+.sponsor-item {
+  border-radius: 0.3125em;
+  margin: 4px 0;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column; /* 垂直排列子元素 */
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+.sponsor-item > img {
+  max-width: 210px;
+  max-height: 100px;
+  filter: grayscale(1) opacity(0.5);
+  transition: 0.3s;
+}
+
+.sponsor-item:hover img {
+  transition: 0.3s;
+  filter: grayscale(0) opacity(1);
+}
+
+.sponsor-item .text {
+  margin-top: 8px; /* 设置文本与图标之间的间距 */
+  font-size: 1rem; /* 设置文本的字体大小 */
+  color: #333; /* 设置文本的颜色 */
+  filter: grayscale(1) opacity(0.5); /* 初始灰色滤镜和不透明度 */
+  transition: 0.3s; /* 添加过渡效果 */
+  font-family: "寒";
+}
+
+.sponsor-item:hover .text {
+  filter: grayscale(0) opacity(1); /* 鼠标悬停时移除灰色滤镜和不透明度 */
+}
