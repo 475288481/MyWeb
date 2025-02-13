@@ -69,7 +69,6 @@
   opacity: 1; /* 滚动后的不透明度 */
 }
 
-
 .navbar a {
   /* 设置元素为行内块级元素 */
   display: inline-block;

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/foot.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/tutorial.css" />
+    <link rel="icon" href="img/i.png" type="" />
+    <title>教程</title>
+  </head>
+  <body>
+    <!-- 头部右边导航栏 -->
+    <header class="header">
+      <a href="#" class="logo">Wei</a>
+      <nav class="navbar">
+        <a href="index.html" class="item" style="--i: 1">主页</a>
+        <a href="sf.html" class="item" style="--i: 2">软件</a>
+        <a href="web.html" class="item" style="--i: 3">网站</a>
+        <a href="#" class="active item" style="--i: 4">教程</a>
+      </nav>
+    </header>
+    <!-- 背景图 -->
+    <div class="bg">
+      <img src="img/BJ.jpg" alt="背景图" loading="lazy" />
+    </div>
+    <!-- 矩形 -->
+    <div class="bgrounded-rectangle"></div>
+    <!-- 文本 -->
+    <div class="box">
+      <a href="tutorial/CUP.html" class="rectangle-container">
+        <img src="img/jc/AMD-Intel.png" alt="示例图片" class="rectangle-image" />
+        <div class="rectangle-text">
+          <h2>CPU</h2>
+          <p>AMD与Intel的各个型号的区别</p>
+        </div>
+      </a>
+    </div>
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector(".header");
+        if (window.scrollY > 250) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+    </script>
+    <!-- 页脚 -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>所有内容来源于互联网，如有侵权</p>
+        <p>联系邮箱:zhou_bw@qq.com</p>
+      </div>
+    </footer>
+  </body>
+</html>

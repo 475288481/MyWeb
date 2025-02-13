@@ -1,0 +1,141 @@
+/* 声明的字体名称和字体路径 */
+@font-face {
+    font-family: "寒";
+    src: url("/ttf/ChillRoundGothic_Bold.ttf"),
+      url("/ttf/ChillRoundGothic_ExtraLight.ttf"),
+      url("/ttf/ChillRoundGothic_Heavy.ttf"),
+      url("/ttf/ChillRoundGothic_Light.ttf"),
+      url("/ttf/ChillRoundGothic_Medium.ttf"),
+      url("/ttf/ChillRoundGothic_Regular.ttf"),
+      url("/ttf/ChillRoundGothic_SemiBold.ttf"),
+      url("/ttf/ChillRoundGothic_Thin.ttf");
+  }
+  
+
+:root {
+  --max-width: 980px;
+}
+
+body {
+    background: linear-gradient(to bottom, #f5f5f7 0%, #ffffff 100%);
+  font-family: "寒" ;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  animation: fadeUp 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+.content-section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  animation: fadeUp 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+.hero {
+  text-align: center;
+  padding: 8rem 2rem 4rem;
+  animation: fadeUp 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+.hero p {
+  font-size: 1.8rem;
+  color: #86868b;
+  opacity: 0;
+  animation: fadeUp 0.8s 0.2s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+.chip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 3rem auto;
+  animation: fadeUp 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+.content-block {
+  margin: 4rem auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  animation: fadeUp 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+.content-block h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  width: 100%;
+  animation: fadeUp 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+.content-text {
+  font-size: 1.2rem;
+  color: #1d1d1f;
+  line-height: 1.6;
+  max-width: 680px;
+  margin: 0 auto 2rem;
+  animation: fadeUp 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+.left-box {
+  width: 45%;
+  margin: 10px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeUp 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+.right-box {
+  width: 45%;
+  margin: 10px;
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeUp 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 6rem 1.5rem 3rem;
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .content-block h2 {
+    font-size: 2.2rem;
+  }
+
+  .chip-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+}

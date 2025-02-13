@@ -15,6 +15,7 @@ body {
   background: #f8f9fa;
   background: linear-gradient(to right, #abd8f8, #ffffff); /* 设置渐变背景色 */
   user-select: none;
+  font-family: "寒";
 }
 
 /* 背景图 */
@@ -70,6 +71,18 @@ body {
   flex-wrap: wrap; /* 允许子元素换行 */
 }
 
+/* 定义 expandIn 动画 */
+@keyframes expandIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .software-box {
   width: 300px; /* 设置矩形的宽度 */
   height: 300px; /* 设置矩形的高度 */
@@ -81,6 +94,7 @@ body {
   justify-content: center; /* 子元素在主轴上居中对齐 */
   align-items: center; /* 子元素在交叉轴上居中对齐 */
   overflow: hidden; /* 隐藏超出容器的部分 */
+  animation: expandIn 1.6s ease forwards; /* 应用 expandIn 动画 */
 }
 
 .software-box .button-container {
@@ -104,7 +118,6 @@ body {
   color: #0d47a1;
   margin: 10px 0;
   text-align: center;
-  font-family: "寒";
 }
 
 .software-box p {
@@ -112,7 +125,6 @@ body {
   color: #000000;
   margin: 10px 0;
   text-align: center;
-  font-family: "寒";
 }
 
 .software-box a.button {
@@ -143,7 +155,6 @@ body {
 .button span {
   display: inline-block; /* 使文字成为行内块元素 */
   margin-left: 10px; /* 文字和图标之间的间距 */
-  font-family: "寒";
   position: absolute; /* 使文字相对于按钮定位 */
   right: -100%; /* 初始位置在按钮外部 */
   transition: right 0.3s, transform 0.3s; /* 添加过渡效果 */
@@ -228,7 +239,6 @@ body {
   color: #000;
   writing-mode: vertical-rl; /* 文字纵向显示 */
   margin-left: 10px;
-  font-family: "寒";
 }
 
 @keyframes circleIndicatorAnimate {
@@ -258,38 +268,38 @@ body {
 /* 媒体查询 */
 @media (max-width: 768px) {
   .navbar {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .box {
-      width: 90%;
+    width: 90%;
   }
 
   .links-collect {
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 
   .title-box h1 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 480px) {
   .navbar {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .box {
-      width: 100%;
+    width: 100%;
   }
 
   .links-collect {
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 
   .title-box h1 {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 }
