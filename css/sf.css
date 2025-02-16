@@ -192,6 +192,7 @@ body {
   left: 0; /* 固定在左侧 */
   top: 70%; /* 垂直居中 */
   transform: translateY(-50%); /* 垂直居中 */
+  z-index: 1000; /* 设置层级 */
 }
 
 .tab-bar {
